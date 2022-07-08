@@ -9,30 +9,26 @@ package paquete04;
  *
  * @author reroes
  */
-public class TransporteTaxi extends Transporte {
-    private String cooperativaTaxi;
+public class TransporteMaritimo extends Transporte{
+    private String cooperativaMaritima;
     
-    
-    public void establecerCooperativaTaxi(String n){
-        cooperativaTaxi = n;
+    public void establecerCooperativaMaritima(String n){
+        cooperativaMaritima = n;
     }
-    
     
     @Override
     public void establecerTarifa(){
-        tarifa = 0.40 + (0.40*0.5);
+        tarifa = 50.00 + 0.75;
     }
     
-    
-    public String obtenerCooperativaTaxi(){
-        return cooperativaTaxi;
+    public String obtenerCooperativaMaritima(){
+        return cooperativaMaritima;
     }
-        
+    
     @Override
     public String toString() {
-        String cadena = String.format("Transporte Taxi: %.2f\n", obtenerTarifa());
+        String cadena = String.format("Transporte Maritimo: %.2f\n", obtenerTarifa());
         
         return cadena;
     }
-    
 }
