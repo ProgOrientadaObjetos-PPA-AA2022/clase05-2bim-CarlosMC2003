@@ -10,14 +10,18 @@ package paquete06;
 public class Principal {
     public static void main(String[] args) {
         
-        MayorEdad representante = new MayorEdad("José", "Visa");
+        Tarjeta tj = new Tarjeta("Banco Pichincha", 19000);
+        MayorEdad representante = new MayorEdad("José", tj);
         
         MenorEdad menor = new MenorEdad("Felipe", representante);
         
         
-        System.out.printf("Nombre:%s - Tarjeta:%s\n",
+        System.out.printf("Nombre:%s\n"
+                + "-------------------------------\n"
+                + "TARJETA\n"
+                + "%s",
                 menor.obtenerNombre(), 
-                menor.obtenerRepresentante().obtenerTarjeta());
+                tj);
         
     }
 }
